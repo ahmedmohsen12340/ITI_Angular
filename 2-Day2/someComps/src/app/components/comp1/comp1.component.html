@@ -1,0 +1,7 @@
+<div class="comp">
+  <input type="text" [value]="value" (input)="onInput($event)">
+  <p>{{value}}</p>
+  <div class="btn">
+    <button (click)="value=''">Reset</button>
+  </div>
+</div>
