@@ -1,0 +1,7 @@
+<div class="container">
+  <input type="text" placeholder="name" #name>
+  <span *ngIf="invalidName==true">you have to enter a 3 charcter at least</span>
+  <input type="text" placeholder="age" #age>
+  <span *ngIf="invalidAge==true">age must be between 20 and 30 </span>
+  <button (click)="onAdd(name,age)">ADD</button>
+</div>

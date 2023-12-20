@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  margin: 25px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  min-height: 100px;
+}
