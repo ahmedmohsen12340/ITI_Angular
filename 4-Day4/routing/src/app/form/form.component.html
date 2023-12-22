@@ -1,0 +1,22 @@
+<div class="container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input formControlName="name" type="email" class="form-control">
+      <div *ngIf="invalidName" id="emailHelp" class="form-text">you have to enter name with 3 character at least</div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Age</label>
+      <input formControlName="age" type="email" class="form-control">
+      <div *ngIf="invalidAge" id="emailHelp" class="form-text">you have to enter age between 20 and 30</div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input formControlName="email" type="email" class="form-control">
+      <div *ngIf="invalidEmail" id="emailHelp" class="form-text">you have to enter a valid email</div>
+    </div>
+    <div class="mb-3">
+      <input [disabled]="invalidName || invalidAge || invalidEmail" type="submit" class="form-control">
+    </div>
+  </form>
+</div>
