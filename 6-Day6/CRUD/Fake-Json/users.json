@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "manar",
+      "age": "42",
+      "email": "ma@nar.com",
+      "id": 5
+    },
+    {
+      "name": "osama",
+      "age": "42",
+      "email": "os@os.com",
+      "id": 6
+    }
+  ]
+}

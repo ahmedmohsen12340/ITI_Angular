@@ -1,0 +1,12 @@
+<div appOver class="row text-center" [ngClass]="{'my-3': delFlag}">
+  @if (data&& data.id&& delFlag) {
+  <span class="col-1">{{data.id}}</span>
+  <span class="col-2">{{data.name|mr}}</span>
+  <span class="col-2">{{data.age}}</span>
+  <span class="col-2">{{data.email}}</span>
+  <span class="col-2"><a routerLink="update/{{data.id}}"><i class="fa-solid fa-pen"></i></a></span>
+  <span class="col-2"><a routerLink="details/{{data.id}}"><i class="fa-solid fa-circle-info"></i></a></span>
+  <span class="col-1"><a routerLink="" (click)="onDelete(data.id)"><i class="fa-regular fa-trash-can"></i></a>
+  </span>
+  }
+</div>

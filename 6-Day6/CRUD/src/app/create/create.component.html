@@ -1,0 +1,29 @@
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="card p-3">
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input name="name" type="text" class="form-control" formControlName="name">
+    @if(inValidName){
+    <div class="form-text">name must be 3 or more</div>
+    }
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Age</label>
+    <input name="age" type="text" class="form-control" formControlName="age">
+    @if(inValidAge){
+    <div class="form-text">age must be between 15 & 100</div>
+    }
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input name="email" type="text" class="form-control" formControlName="email">
+    @if(inValidEmail){
+    <div class="form-text">you must enter a valid email</div>
+    }
+  </div>
+  <div class="w-100 d-flex justify-content-center">
+    <button [disabled]="!createForm.valid" type="submit" class="btn btn-primary">
+      Create User
+    </button>
+  </div>
+  <!-- <div class="m-3 text-center">you have create a new user</div> -->
+</form>

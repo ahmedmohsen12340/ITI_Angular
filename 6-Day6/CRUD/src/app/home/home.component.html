@@ -1,0 +1,29 @@
+<div class="card p-3">
+  <div class="row text-center">
+    <span class="col-1">Id</span>
+    <span class="col-2">Name</span>
+    <span class="col-2">Age</span>
+    <span class="col-2">Email</span>
+    <span class="col-2">Update</span>
+    <span class="col-2">Details</span>
+    <span class="col-1">Del</span>
+  </div>
+  <hr>
+  <!-- <tr>
+        @if (user&& user.id) {
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.email}}</td>
+        <td><a routerLink="update/{{user.id}}"><i class="fa-solid fa-pen"></i></a></td>
+        <td><a routerLink="/details/{{user.id}}"><i class="fa-solid fa-circle-info"></i></a></td>
+        <td><a routerLink="" (click)="onDelete(user.id)"><i class="fa-regular fa-trash-can"></i></a>
+        </td>
+        }
+      </tr> -->
+  @for (user of users; track user.id) {
+  <div class="w-100">
+    <app-user [data]="user"></app-user>
+  </div>
+  }
+</div>
