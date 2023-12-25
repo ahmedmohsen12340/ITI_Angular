@@ -1,0 +1,31 @@
+<form [formGroup]="updateUser" (ngSubmit)="onSubmit()" class="card p-3">
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input type="text" class="form-control" formControlName="name" [placeholder]="data.name">
+    @if(inValidName){
+    <div class="form-text">name must be 3 or more</div>
+    }
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Age</label>
+    <input type="text" class="form-control" formControlName="age" [placeholder]="data.age">
+    @if(inValidAge){
+    <div class="form-text">age must be between 15 & 100</div>
+    }
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input type="text" class="form-control" formControlName="email" [placeholder]="data.email">
+    @if(inValidEmail){
+    <div class="form-text">you must enter a valid email</div>
+    }
+  </div>
+  <div class="w-100 d-flex justify-content-center">
+    <button [disabled]="!updateUser.valid" type="submit" class="btn btn-primary">
+      Update
+    </button>
+    <!-- <div>
+      valid : {{createForm.valid|json}}
+    </div> -->
+  </div>
+</form>
